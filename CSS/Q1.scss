@@ -1,0 +1,63 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.box-wrap{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-1{
+    background-color: #d07f47;
+    .title{
+        font-size: 1.5rem;
+        font-family: 'Rock Salt';
+    }
+    .box{
+        width: 35%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border: none;
+            &:hover{
+                border: 3px solid seagreen;
+            }
+        }
+    }
+    .dec{
+        background-color: #fff;
+        padding: .5rem;
+        text-align: center;
+    }
+}
+
+.color-2{
+    background-color: #fbe9dd;
+    .title{
+        font-size: 1.5rem;
+        font-family: 'Rock Salt';
+    }
+    .box{
+        width: 35%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border: 3px solid transparent;
+            &:hover{
+                border: 3px solid seagreen;
+            }
+        }
+    }
+    .dec{
+        background-color: #fff;
+        padding: .5rem;
+        text-align: center;
+    }
+}
