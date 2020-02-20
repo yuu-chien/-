@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2. 關於 jQuery 中使用 toggle()</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/Q2.css">
+</head>
+<body>
+    <div class="square-btn-bg">
+        <div class="square-btn">
+            <div class="decoration"></div>
+            <div class="decoration"></div>
+            <div class="decoration"></div>
+        </div>
+    </div>
+    <p class="indicate-1">CLICK !</p>
+    <p class="indicate-2">GOOD JOB !</p>
+    <div class="description">
+        <!-- 在 jQuery 1.9以上版本，toggle() 僅能做到顯示與隱藏。如果想要進行特定的樣式切換，可以透過 toggleClass() 增加或移除 class 以達到效果。 -->
+        indicate → use <em>toggle()</em> to show & hide
+        <br>
+        button & background → use <em>toggleClass()</em> to change
+    </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+
+    $('.indicate-2').hide();
+
+    $(".square-btn").on("click",function(){
+        $(".indicate-1, .indicate-2").toggle();
+        $(".square-btn-bg").toggleClass("change-flex-end");
+        $("body").toggleClass("change-bgc")
+    })
+
+</script>
+</html>

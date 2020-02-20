@@ -1,0 +1,68 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn-shape($basic_px:50px) {
+    width: $basic_px*2;
+    height: $basic_px;
+    border-radius: 8px;
+}
+
+$basic_px :50px;
+
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #ffdabc;
+    @include flex-center;
+    flex-direction: column;
+    transition: .5s;
+}
+
+.square-btn-bg{
+    @include btn-shape;
+    @include flex-center;
+    justify-content: flex-start;
+    background-color: #61B872;
+    // transition: 1s;
+    .square-btn{
+        @include flex-center;
+        @include btn-shape;
+        width: $basic_px;
+        background-color: #E9EDF1;
+        box-sizing: border-box;
+        border: solid 2.5px #E4E9ED;
+        cursor: pointer;
+        box-shadow: 2px 0px 3px 0px #aaa;
+        .decoration{
+            width: $basic_px / 8;
+            height: $basic_px / 2;
+            border-radius: 5px;
+            background-color: #C1C8CE;
+        }
+        :nth-child(2){
+            margin: 0 $basic_px / 15;
+        }
+    }
+}
+.indicate-1, .indicate-2{
+    font-family: 'Gloria Hallelujah';
+}
+.description{
+    text-align: justify;
+    line-height: 20px;
+    font-family: 'Gloria Hallelujah';
+    font-size: $basic_px / 4;
+}
+
+.change-flex-end{
+    justify-content: flex-end;
+}
+
+.change-bgc{
+    background-color: #ccc;
+}
