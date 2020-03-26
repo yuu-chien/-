@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/Q5-ocean-zone.css">
+    <title>Layers of the Ocean</title>
+</head>
+<body>
+
+    <section id="land">
+        <h1>Layers of the Ocean</h1>
+        <p>Choose the zone you wanna go</p>
+        <p>Information by <a href="https://www.weather.gov/jetstream/layers_ocean" target="_blank">The National Weather Service</a></p>
+        <ul class="choose-wrap">
+            <li class="zone-item" data-zone="#Sunlight">Sunlight zone</li>
+            <li class="zone-item" data-zone="#Twilight">Twilight zone</li>
+            <li class="zone-item" data-zone="#Midnight">Midnight zone</li>
+            <li class="zone-item" data-zone="#Abyss">The Abyss</li>
+            <li class="zone-item" data-zone="#Hadal">Hadal zone</li>
+        </ul>
+    </section>
+
+    <div id="ocean-zone-wrap">
+        <section id="Sunlight">
+            <h2>Sunlight zone</h2>
+            <p>This surface layer is also called the sunlight zone and extends from the surface to 200 meters (660 FT). It is in this zone that most of the visible light exists. With the light comes heating from sun. This heating is responsible for wide change in temperature that occurs in this zone, both in the latitude and each season.</p>
+        </section>
+        <section id="Twilight">
+            <h2>Twilight zone</h2>
+            <p>Below the epipelagic zone is the mesopelagic zone, extending from 200 meters (660 FT) to 1,000 meters (3,300 FT). The mesopelagic zone is sometimes referred to as the twilight zone or the midwater zone as sunlight this deep is very faint. Temperature changes the greatest in this zone as this is the zone with contains the thermocline.</p>
+        </section>
+        <section id="Midnight">
+            <h2>Midnight zone</h2>
+            <p>The depths from 1,000-4,000 meters (3,300 - 13,100 FT) comprise the bathypelagic zone. Due to its constant darkness, this zone is also called the midnight zone. The only light at this depth (and lower) comes from the bioluminescence of the animals themselves.</p>
+        </section>
+        <section id="Abyss">
+            <h2>The Abyss</h2>
+            <p>The Abyssopelagic Zone (or abyssal zone) extends from 13,100 FT (4,000 meters) to 19,700 FT (6,000 meters). It is the pitch-black bottom layer of the ocean.
+            <br>
+            The name (abyss) comes from a Greek word meaning "no bottom" because they thought the ocean was bottomless. Three-quarters of the area of the deep-ocean floor lies in this zone.
+            </p>
+        </section>
+        <section id="Hadal">
+            <h2>Hadal zone</h2>
+            <p>The deepest zone of the ocean, the hadalpelagic zone extends from 19,700 FT (6,000 meters) to the very bottom at 36,070 FT (10,994 meters) in the Mariana Trench off the coast of Japan.
+            <br>
+            The temperature is constant at just above freezing. The weight of all the water over head in the Mariana Trench is over 8 tons per square inch.
+            <br> 
+            Even at the very bottom life exists. In 2005, tiny single-celled organisms, called foraminifera, a type of plankton, were discovered in the Challenger Deep trench southwest of Guam in the Pacific Ocean. The deepest a fish have ever been found, Abyssobrotula galatheae, was in the Puerto Rico Trench at 8,372 meters (27,460 FT).</p>
+        </section>
+    </div>
+
+</body>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script>
+$('.zone-item').click(function(){
+    let idName = $(this).data('zone');
+    $('html,body').animate({
+        scrollTop:$(idName).offset().top
+    }, 3000);
+})
+
+</script>
+</html>

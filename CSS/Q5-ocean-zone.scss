@@ -1,0 +1,98 @@
+@mixin textStyle {
+    width: 70%;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+@mixin zoneStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: dashed 2px #fff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Special Elite', cursive;
+    background-color: rgba(157,221,255,1);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#ocean-zone-wrap {
+    background: linear-gradient(180deg, rgba(157,221,255,1) 0%, rgba(89,131,171,1) 26%, rgba(28,44,108,1) 100%);
+    background-repeat: no-repeat;
+}
+
+#land {
+    width: 100%;
+    height: 65vh;
+    background-color: tan;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 60% 100%, 27% 77%, 0% 80%, 0 0);
+    @include zoneStyle;
+    h1 {
+        color: #f8f8f8;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    .choose-wrap {
+        width: 45%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        .zone-item {
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: peru;
+            margin-left: 1.2rem;
+            text-align: center;
+            &:hover {
+                color: #31388a;
+            }
+        }
+    }
+}
+
+#ocean-zone-wrap {
+    width: 100%;
+    p {
+        @include textStyle;
+    }
+    #Sunlight {
+        height: 328px;
+        @include zoneStyle;
+    }
+    #Twilight {
+        height: 2312px;
+        @include zoneStyle;
+    }
+    #Midnight {
+        height: 4921px;
+        @include zoneStyle;
+    }
+    #Abyss {
+        height: 3281px;
+        @include zoneStyle;
+    }
+    #Hadal {
+        height: 8055px;
+        @include zoneStyle;
+    }
+}
