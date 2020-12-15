@@ -1,22 +1,31 @@
-## 圖片 hover 產生外框（border）時會讓圖片位移 - solved
-在想要有 hover 的圖片先預設透明的框線，hover 過去後則不會改變圖片的寬度
-> 對應檔案：`Q1-image-moves-on-hover.html`  
-<a href="https://codepen.io/YCH06/pen/ExjgLrb">Codepen</a>  
-<img src="./SHOW/Q1.png" width="500" alt="Scroll Effect">
+## 使用 hover 產生圖片外框（border）時會使其位移
+> 在想要有 hover 的圖片先預設透明的框線，hover 過去後則不會改變圖片的寬度  
+對應檔案：`Q1-image-moves-on-hover.html`  
 
+<img src="./preview/q1.png" width="500" alt="">
 
-## 使用 .toggle() 切換狀態 - solved
-在 jQuery 1.9以上版本，toggle() ，無法用 [callback function](https://expect7.pixnet.net/blog/post/38296922) ，僅能做到顯示與隱藏。如果想要進行特定的樣式切換，可以透過 toggleClass() 增加或移除 class 以達到效果。 
-> 對應檔案：`Q2-jQuery-toggle.html`  
-<a href="https://codepen.io/YCH06/pen/PoqxKLq">Codepen</a> 
-<img src="./SHOW/Q2.png" width="500" alt="Scroll Effect">
+<br>
+<br>
+
+## 使用 .toggle() 切換狀態
+> 在 jQuery 1.9以上版本，toggle() ，無法用 [callback function](https://expect7.pixnet.net/blog/post/38296922)，僅能做到顯示與隱藏。如果想要進行特定的樣式切換，可以透過 toggleClass() 增加或移除 class 以達到效果。  
+對應檔案：`Q2-jQuery-toggle.html`  
+
+<img src="./preview/q2.png" width="500" alt="">
+
+<br>
+<br>
 
 ## 切換背景圖時會產生閃現或抖動
 > 預先加載好圖片並至合適尺寸
 
-## 如果想使用偽元素…
+<br>
+<br>
 
-## 點擊後將頁面滾動到特定區塊 - solved　
+## 點擊後將頁面滾動到特定區塊　
 > 對應檔案：`Q5-scroll-to-the-particular-block.html`  
-<a href="https://codepen.io/YCH06/pen/WNvYEXr">Codepen</a> 
-<img src="./SHOW/Q5.png" width="500" alt="Scroll Effect">
+
+<img src="./preview/q5.png" width="500" alt="Scroll Effect">
+
+<br>
+<br>　
