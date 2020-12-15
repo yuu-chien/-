@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./content/css/q5-ocean-zone.min.css">
     <title>Q5. 點擊後將頁面滾動到特定區塊</title>
 </head>
+
 <body>
 
     <section id="land">
@@ -38,32 +40,42 @@
         <section id="Abyss">
             <h2>The Abyss</h2>
             <p>The Abyssopelagic Zone (or abyssal zone) extends from 13,100 FT (4,000 meters) to 19,700 FT (6,000 meters). It is the pitch-black bottom layer of the ocean.
-            <br>
-            The name (abyss) comes from a Greek word meaning "no bottom" because they thought the ocean was bottomless. Three-quarters of the area of the deep-ocean floor lies in this zone.
+                <br>
+                The name (abyss) comes from a Greek word meaning "no bottom" because they thought the ocean was bottomless. Three-quarters of the area of the deep-ocean floor lies in this zone.
             </p>
         </section>
         <section id="Hadal">
             <h2>Hadal zone</h2>
             <p>The deepest zone of the ocean, the hadalpelagic zone extends from 19,700 FT (6,000 meters) to the very bottom at 36,070 FT (10,994 meters) in the Mariana Trench off the coast of Japan.
-            <br>
-            The temperature is constant at just above freezing. The weight of all the water over head in the Mariana Trench is over 8 tons per square inch.
-            <br> 
-            Even at the very bottom life exists. In 2005, tiny single-celled organisms, called foraminifera, a type of plankton, were discovered in the Challenger Deep trench southwest of Guam in the Pacific Ocean. The deepest a fish have ever been found, Abyssobrotula galatheae, was in the Puerto Rico Trench at 8,372 meters (27,460 FT).</p>
+                <br>
+                The temperature is constant at just above freezing. The weight of all the water over head in the Mariana Trench is over 8 tons per square inch.
+                <br>
+                Even at the very bottom life exists. In 2005, tiny single-celled organisms, called foraminifera, a type of plankton, were discovered in the Challenger Deep trench southwest of Guam in the Pacific Ocean. The deepest a fish have ever been found, Abyssobrotula galatheae, was in the Puerto Rico Trench at 8,372 meters (27,460 FT).
+            </p>
         </section>
     </div>
 
+    <div class="o-goTop" data-gotop>
+        <i class="o-goTop__icon"></i>
+    </div>
+
 </body>
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
-$('.zone-item').click(function(){
-    let idName = $(this).data('zone');
-    $('html,body').animate({
-        scrollTop:$(idName).offset().top
-    }, 3000);
-})
+    $('.zone-item').click(function() {
+        let idName = $(this).data('zone');
+        $('html,body').animate({
+            scrollTop: $(idName).offset().top
+        }, 3000);
+    });
+
+    $('[data-gotop]').on('click', function(e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 3000);
+    });
 
 </script>
+
 </html>
