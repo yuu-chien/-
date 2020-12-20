@@ -36,4 +36,4 @@
 ## 滾動滑鼠滾輪時換頁；若一次滾動多次則只會換一頁。
 > 對應檔案：`Q7-mouse-wheel-next-page.html`  
 
-<img src="./preview/q７.png" width="500" alt="mouse wheel">
+<img src="./preview/q7.png" width="500" alt="mouse wheel">
