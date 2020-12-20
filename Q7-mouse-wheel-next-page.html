@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./content/css/q7-mouseweel.min.css">
+    <title>mousewheel practice</title>
+</head>
+
+<body>
+    <ul class="c-list">
+        <li class="c-list__item">
+            <div class="c-list__note">mixing</div>
+        </li>
+        <li class="c-list__item">
+            <div class="c-list__note">roll the dough</div>
+        </li>
+        <li class="c-list__item">
+            <div class="c-list__note">baking</div>
+        </li>
+        <li class="c-list__item">
+            <div class="c-list__note">yummy</div>
+        </li>
+    </ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.7/jquery.mousewheel.min.js"></script>
+<script>
+    let total = $('.c-list__item').length;
+    let serial = 0;
+    let deltaY;
+    let isDoingStuff = false;
+
+    function moving() {
+        $('html,body').animate({
+            scrollTop: $('.c-list__item').eq(serial).offset().top,
+        }, 800);
+    }
+
+    $(window).on('mousewheel', function (e) {
+
+        if (isDoingStuff) {
+            return;
+        }
+
+        deltaY = e.deltaY;
+        isDoingStuff = true;
+
+        if (deltaY == -1) {
+            serial++
+            if (serial > total - 1) {
+                serial = total - 1
+            }
+            moving();
+
+        } else if (deltaY == 1) {
+            serial--
+            if (serial < 0) {
+                serial = 0
+            }
+            moving();
+        };
+
+        setTimeout(function () {
+            isDoingStuff = false;
+        }, 500)
+    });
+</script>
+
+</html>
